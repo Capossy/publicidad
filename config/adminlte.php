@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => 'Publicidad',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -257,7 +257,7 @@ return [
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
-    'password_reset_url' => 'password/reset',
+    'password_reset_url' => 'forgot-password',
     'password_email_url' => 'password/email',
     'profile_url' => false,
 
@@ -321,7 +321,7 @@ return [
         ['header' => 'account_settings'],
         [
             'text' => 'profile',
-            'url'  => 'admin/settings',
+            'url'  => 'user/profile',
             'icon' => 'fas fa-fw fa-user',
         ],
         [

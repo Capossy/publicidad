@@ -20,9 +20,9 @@ class UserFactory extends Factory
     /**
      * Define the model's default state.
      *
-     * @return array<string, mixed>
+     * @return array
      */
-    public function definition(): array
+    public function definition()
     {
         return [
             'name' => $this->faker->name(),
@@ -36,9 +36,9 @@ class UserFactory extends Factory
     /**
      * Indicate that the model's email address should be unverified.
      *
-     * @return $this
+     * @return \Illuminate\Database\Eloquent\Factories\Factory
      */
-    public function unverified(): static
+    public function unverified()
     {
         return $this->state(function (array $attributes) {
             return [
@@ -52,7 +52,7 @@ class UserFactory extends Factory
      *
      * @return $this
      */
-    public function withPersonalTeam(): static
+    public function withPersonalTeam()
     {
         if (! Features::hasTeamFeatures()) {
             return $this->state([]);

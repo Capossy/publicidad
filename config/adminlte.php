@@ -14,8 +14,8 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
-    'title_prefix' => '',
+    'title' => '',
+    'title_prefix' => 'Prueba | ',
     'title_postfix' => '',
 
     /*
@@ -257,7 +257,7 @@ return [
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
-    'password_reset_url' => 'password/reset',
+    'password_reset_url' => 'forgot-password',
     'password_email_url' => 'password/email',
     'profile_url' => false,
 
@@ -294,11 +294,11 @@ return [
         [
             'type'         => 'navbar-search',
             'text'         => 'search',
-            'topnav_right' => true,
+            'topnav_right' => false,
         ],
         [
             'type'         => 'fullscreen-widget',
-            'topnav_right' => true,
+            'topnav_right' => false,
         ],
 
         // Sidebar items:
@@ -312,35 +312,35 @@ return [
             'can'  => 'manage-blog',
         ],
         [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
+            'text'        => 'Index',
+            'url'         => 'file',
             'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
+            /*'label'       => '',
+            'label_color' => 'success',*/
         ],
-        ['header' => 'account_settings'],
+        ['header' => 'Configuracion de la cuenta'],
         [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
+            'text' => 'Perfil',
+            'url'  => 'user/profile',
             'icon' => 'fas fa-fw fa-user',
         ],
-        [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
+        /*[
+            'text' => 'Cambiar contraseña',
+            'url'  => 'user/profile',
             'icon' => 'fas fa-fw fa-lock',
-        ],
+        ],*/
         [
-            'text'    => 'multilevel',
+            'text'    => 'Datos',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Acerca de nosotros',
+                    'url'  => '/about',
                 ],
                 [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
+                    'text'    => 'Contactenos',
+                    'url'     => '/contacto',
+                    /*'submenu' => [
                         [
                             'text' => 'level_two',
                             'url'  => '#',
@@ -359,15 +359,15 @@ return [
                                 ],
                             ],
                         ],
-                    ],
+                    ],*/
                 ],
-                [
+                /*[
                     'text' => 'level_one',
                     'url'  => '#',
-                ],
+                ],*/
             ],
         ],
-        ['header' => 'labels'],
+        /*['header' => 'labels'],
         [
             'text'       => 'important',
             'icon_color' => 'red',
@@ -382,7 +382,7 @@ return [
             'text'       => 'information',
             'icon_color' => 'cyan',
             'url'        => '#',
-        ],
+        ],*/
     ],
 
     /*
